@@ -28,6 +28,8 @@
 - The Builder Pattern is used to create complex objects step-by-step. It is especially useful here because students have many attributes (ID, Name, Email, etc.), and not all might be required at once.
 
 **Decoupling** Changes in GraduateStudent math won't affect UndergraduateStudent and PartTiemStudent.
+
 **Scalability:** You can add 100 different student types easily.
+
 **Robustness:** Your displayStudentDetails() method in the parent class works for all students because they all implement the required abstract methods.
 
