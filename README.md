@@ -1,4 +1,4 @@
-#SOLID Principles Application
+# SOLID Principles Application
 I. Single Responsibility Principle (SRP)
 A class should have one, and only one, reason to change.
 
@@ -13,5 +13,5 @@ My design uses the Student abstract class as a contract. In a Main class, you ca
 
 Because both subclasses implement calculateTuition(), you can call s.calculateTuition() on any Student object without knowing its specific type. The program will behave correctly regardless of which subclass is currently being processed.
 
-#Builder Design Pattern Implementation
+# Builder Design Pattern Implementation
 The Builder Pattern is used to create complex objects step-by-step. It is especially useful here because students have many attributes (ID, Name, Email, etc.), and not all might be required at once.
