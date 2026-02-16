@@ -4,14 +4,56 @@ package za.ac.cput;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        GraduateStudent grad = new GraduateStudent.Builder()
+                .studentId("2024000")
+                .name("Sipho Dlamini")
+                .email("dlaminis@gmail.com")
+                .department("ICT Multmedia")
+                .modules(5)
+                .stipend(100000.00)
+                .researchAssistant(true) // This will trigger the R1000 cost
+                .build();
+        GraduateStudent grad1 = new GraduateStudent.Builder()
+                .studentId("2025000")
+                .name("Zinhle Ngcobo")
+                .email("ngcoboz@gmail.com")
+                .department("ICT Application Development")
+                .modules(6)
+                .stipend(100000.00)
+                .researchAssistant(false) // This will trigger the R1000 cost
+                .build();
+        GraduateStudent grad2 = new GraduateStudent.Builder()
+                .studentId("2027000")
+                .name("Zama Ndlovu")
+                .email("ndlovuz@gmail.com")
+                .department("ICT Com Net")
+                .modules(5)
+                .stipend(4000.00)
+                .researchAssistant(false) // This will trigger the R1000 cost
+                .build();
+        UndergraduateStudent under = new UndergraduateStudent.Builder()
+                .studentId("2025000")
+                .name("Zinhle Ngcobo")
+                .email("ngcoboz@gmail.com")
+                .department("ICT Application Development")
+                .modules(6)
+                .creditHours(30)
+                .scholarshipAmount(20000)
+                .build();
+        UndergraduateStudent under2 = new UndergraduateStudent.Builder()
+                .studentId("2027000")
+                .name("Zama Ndlovu")
+                .email("ndlovuz@gmail.com")
+                .department("ICT Com Net")
+                .modules(7)
+                .creditHours(30)
+                .scholarshipAmount(100000)
+                .build();
+        grad.displayStudentDetails();
+        grad1.displayStudentDetails();
+        grad2.displayStudentDetails();
+        under.displayStudentDetails();
+        under2.displayStudentDetails();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
     }
 }
