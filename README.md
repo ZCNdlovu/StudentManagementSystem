@@ -40,7 +40,7 @@
   
 **Decoupling** Changes in GraduateStudent math won't affect UndergraduateStudent and PartTimeStudent.
 
-**Scalability:** You can add 100 different student types easily.
+**Scalability:** I can add more different student types easily.
 
-**Robustness:** Your displayStudentDetails() method in the parent class works for all students because they all implement the required abstract methods.
+**Robustness:** My displayStudentDetails() method in the parent class works for all students because they all implement the required abstract methods.
 
