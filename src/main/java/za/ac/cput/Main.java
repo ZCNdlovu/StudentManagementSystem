@@ -23,12 +23,12 @@ public class Main {
 
         UndergraduateStudent under = new UndergraduateStudent.Builder().studentId("2025000")
                 .name("Zinhle Ngcobo").email("ngcoboz@gmail.com").department("ICT Application Development")
-                .modules(6).creditHours(30).scholarshipAmount(2000)
+                .modules(6).scholarshipAmount(2000)
                 .build();
 
         UndergraduateStudent under2 = new UndergraduateStudent.Builder().studentId("2027000")
                 .name("Zama Ndlovu").email("ndlovuz@gmail.com").department("ICT Com Net").modules(7)
-                .creditHours(30).scholarshipAmount(100000)
+                .scholarshipAmount(100000)
                 .build();
 
         PartTimeStudent partTime = new PartTimeStudent.Builder().studentId("PT-2026-404")
@@ -48,8 +48,7 @@ public class Main {
         System.out.println("==================================================\n");
 
         for (Student s : students) {
-
-            s.displayStudentDetails();
+           s.displayStudentDetails();
             System.out.println("--------------------------------------------------");
 //        grad.displayStudentDetails();
 //        grad1.displayStudentDetails();
