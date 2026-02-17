@@ -27,16 +27,16 @@
 #  Inheritance ("Is-a" Relationship)
 - I created a generalization/specialization hierarchy where the Student class is the general concept, and the others are specific types.
 - **Code Evidence:** I used the extends keyword in all my subclasses.
--- UndergraduateStudent is a Student.
--- GraduateStudent is a Student.
--- PartTimeStudent**is a** Student`.
+- - UndergraduateStudent is a Student.
+- - GraduateStudent is a Student.
+- - PartTimeStudent**is a** Student`.
 - **Why it's "Strong":** It is a strong "is-a" relationship because the subclasses inherit all the fields (studentId, name, email) and the behavior (calculateTuition) from the parent. They cannot exist as students without that parent structure.
 
 # Composition ("Has-a" Strong) —  (Implicitly)
 - I use a form of composition with a Builder Pattern.
--- **Code Evidence:** The Builder is a static inner class.
--- **The Relationship:** The UndergraduateStudent class "has a" Builder. Because the Builder is an inner class defined inside the Student class, it is tightly coupled
--- **Lifecycle:** In my code, the Builder's purpose is only to create the Student. Once .build() is called, the Builder's job is done. This strong association is part of the object's creation lifecycle.
+- - **Code Evidence:** The Builder is a static inner class.
+- - **The Relationship:** The UndergraduateStudent class "has a" Builder. Because the Builder is an inner class defined inside the Student class, it is tightly coupled
+- - **Lifecycle:** In my code, the Builder's purpose is only to create the Student. Once .build() is called, the Builder's job is done. This strong association is part of the object's creation lifecycle.
   
 **Decoupling** Changes in GraduateStudent math won't affect UndergraduateStudent and PartTiemStudent.
 
