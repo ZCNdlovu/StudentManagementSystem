@@ -38,7 +38,7 @@
   - **The Relationship:** The UndergraduateStudent class "has a" Builder. Because the Builder is an inner class defined inside the Student class, it is tightly coupled
   - **Lifecycle:** In my code, the Builder's purpose is only to create the Student. Once .build() is called, the Builder's job is done. This strong association is part of the object's creation lifecycle.
   
-**Decoupling** Changes in GraduateStudent math won't affect UndergraduateStudent and PartTiemStudent.
+**Decoupling** Changes in GraduateStudent math won't affect UndergraduateStudent and PartTimeStudent.
 
 **Scalability:** You can add 100 different student types easily.
 
