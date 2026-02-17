@@ -29,7 +29,7 @@
 - **Code Evidence:** I used the extends keyword in all my subclasses.
   - UndergraduateStudent is a Student.
   - GraduateStudent is a Student.
-  - PartTimeStudent**is a** Student`.
+  - PartTimeStudent is a Student`.
 - **Why it's "Strong":** It is a strong "is-a" relationship because the subclasses inherit all the fields (studentId, name, email) and the behavior (calculateTuition) from the parent. They cannot exist as students without that parent structure.
 
 # Composition ("Has-a" Strong) —  (Implicitly)
