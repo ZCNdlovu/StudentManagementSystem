@@ -24,6 +24,15 @@
 **Example in my Code:**
 - The UndergraduateStudent, GraduateStudent and PartTimeStudent they honour the contract of the calculateTuition() method, even though they using different tuitions.
 
+## III. Single Responsibility Principle (SRP)
+- Means A class should have one, and only one, reason to change.
+
+**Application:**
+- The Student class and its subclasses are responsible solely for managing student data and financial calculations.
+
+**Examplle in my Code:**
+- That how the calculateTuition() method only handles the math, while the displayStudentDetails() method handles the output formatting. By separating the logic of "calculating" from "displaying," you ensure that a change in university fee structures doesn't break the code that prints the report.
+
 #  Inheritance ("Is-a" Relationship)
 - I created a generalization/specialization hierarchy where the Student class is the general concept, and the others are specific types.
 - **Code Evidence:** I used the extends keyword in all my subclasses.
