@@ -30,7 +30,7 @@
 **Application:**
 - The Student class and its subclasses are responsible solely for managing student data and financial calculations.
 
-**Examplle in my Code:**
+**Example in my Code:**
 - That how the calculateTuition() method only handles the math, while the displayStudentDetails() method handles the output formatting. By separating the logic of "calculating" from "displaying," you ensure that a change in university fee structures doesn't break the code that prints the report.
 
 #  Inheritance ("Is-a" Relationship)
