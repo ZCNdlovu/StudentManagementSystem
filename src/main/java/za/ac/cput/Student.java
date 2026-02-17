@@ -25,7 +25,7 @@ public abstract class Student {
          System.out.println("Email: " + email);
          System.out.println("Department: " + department);
          System.out.println("Modules: " + modules);
-         System.out.println("Type: " + getStudentType());
-         System.out.println("Tuition: R" + calculateTuition());
+//         System.out.println("Type: " + getStudentType());
+//         System.out.println("Tuition: R" + calculateTuition());
      };
 }

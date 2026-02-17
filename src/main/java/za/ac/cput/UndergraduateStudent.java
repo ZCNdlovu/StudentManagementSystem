@@ -6,6 +6,8 @@ import java.util.Locale;
 public class UndergraduateStudent extends Student{
     private int creditHours;
     private double scholarshipAmount;
+    private double totalFees;
+    private double amountDue;
 
     public UndergraduateStudent() {}
 
@@ -13,19 +15,14 @@ public class UndergraduateStudent extends Student{
          super(builder.studentId, builder.name, builder.email, builder.department, builder.modules);
         this.creditHours = builder.creditHours;
         this.scholarshipAmount = builder.scholarshipAmount;
+        this.totalFees = builder.totalFees;
+        this.amountDue = builder.amountDue;
     }
     @Override
     public double calculateTuition() {
-        // 1. Calculate Total Credits: (Number of modules * 5 credits each)
-        int creditHours = this.modules * 5;
-
-        // 2. Calculate Total Cost: (Total Credits * R100 per credit)
-        double totalFees = creditHours * 500.00;
-
-        // 3. Calculate Amount Due: Cost minus Scholarship
-        double amountDue = totalFees - scholarshipAmount;
-
-        // Return the amount due if it's positive, otherwise 0.0
+        creditHours = this.modules * 5;
+        totalFees = creditHours * 500.00;
+        amountDue = totalFees - scholarshipAmount;
         return (amountDue > 0) ? amountDue : 0.0;
     }
 
@@ -38,15 +35,13 @@ public class UndergraduateStudent extends Student{
     public void displayStudentDetails() {
         NumberFormat currency = NumberFormat.getCurrencyInstance(new Locale("en", "ZA"));
 
-        // Basic Info from Student class
         super.displayStudentDetails();
 
-        // Specific Math for the report
-        int creditHourst = this.modules * 5;
-        double totalFees = creditHours * 500.00;
-        double amountDue = calculateTuition();
+        creditHours = this.modules * 5;
+        totalFees = creditHours * 500.00;
+        amountDue = calculateTuition();
 
-        System.out.println("Total Modules: " + modules);
+
         System.out.println("Total Credits Hours (5 per module): " + creditHours);
         System.out.println("Cost per Credit: " + currency.format(500.00));
         System.out.println("Gross Total Fees: " + currency.format(totalFees));
@@ -70,6 +65,8 @@ public class UndergraduateStudent extends Student{
         private int modules;
         private int creditHours;
         private double scholarshipAmount;
+        private double totalFees;
+        private double amountDue;
 
       public Builder studentId(String studentId) {this.studentId = studentId;return this;}
       public Builder name(String name) {this.name = name;return this;}
@@ -78,6 +75,8 @@ public class UndergraduateStudent extends Student{
         public Builder modules(int modules){this.modules = modules; return this;}
         public Builder creditHours(int creditHours) {this.creditHours = creditHours;return this;}
       public Builder scholarshipAmount(double scholarshipAmount){this.scholarshipAmount = scholarshipAmount;return this;}
+      public Builder totalFees(double totalFees){this.totalFees = totalFees; return this;}
+        public Builder amountDue(double amountDue){this.amountDue = amountDue; return this;}
 
         public UndergraduateStudent build(){return new UndergraduateStudent(this);}
     }
